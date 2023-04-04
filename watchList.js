@@ -27,7 +27,7 @@ for(let i=0;i<watchlist.length;i++){
 watchlist[i].addEventListener("click",(e)=>{
     e.preventDefault() 
     if(e.target.id){
-   
+   console.log("bhe")
         navigateToRemove(e.target.id)
         rener(arr)
     }
@@ -53,7 +53,7 @@ function render1(movie){
             <div class="btn" >
         
             <div class="watchlist" id=${movie.imdbID}>
-            <i id=${movie.imdbID} class="fa-solid fa-minus"></i></i>Remove</div>
+            <i id=${movie.imdbID} class="fa-solid fa-minus"></i></i>  Remove</div>
            </div>
         </div>
         <div class="description">
