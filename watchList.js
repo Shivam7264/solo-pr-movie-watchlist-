@@ -31,8 +31,8 @@ function render1(movie){
             <div class="theme">${movie.Genre}</div>
             <div class="btn" >
         
-            <div  data-watch="watch-${movie.imdbID}">
-            <i id=${movie.imdbID} class="fa-solid fa-circle-plus watchlist"></i>Remove</div>
+            <div id=${movie.imdbID}>
+            <i id=${movie.imdbID} class="fa-solid fa-minus"></i></i>Remove</div>
            </div>
         </div>
         <div class="description">
