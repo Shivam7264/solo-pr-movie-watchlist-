@@ -1,0 +1,267 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+
+}
+header{
+    background: url("image\ 36.png");
+   
+    padding: 3rem;
+    border-bottom: 2px solid red;
+    width: 100%;
+    height: 200px;
+    
+    background-color: #121212;
+}
+.head{
+    display: flex;
+    flex-direction: row;
+    gap: 20rem;
+}
+h1{
+    
+    font-size: 50px;
+    color: #FFFFFF;
+
+}
+h3{
+    
+ 
+    font-size: 25px;
+    margin-top: 7rem;
+    
+    
+}
+h3 > a{
+    color: #FFFFFF;
+    text-decoration: none;
+    
+    text-shadow: 2px black;
+}
+.search{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+margin-top: -1rem;
+padding: 0;
+box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+
+}
+#icon{
+   
+   width: 30px;
+   height: 20px;
+}
+.ic{
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+height: 30px;
+
+    background: #2E2E2F;
+}
+input{
+    
+    border: none;
+    width: 60%;
+    height: 36px;
+    background: #2E2E2F;
+    color: #FFFFFF;
+}
+button{
+ width:9rem;
+ height: 38px;
+    background: #4B4B4B;
+    border-radius: 0px 6px 6px 0px;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+}
+.item{
+   border-bottom: 1px solid grey;
+display: flex;
+gap: 1rem;
+width: 40%;
+margin: auto;
+margin-top: 1rem;
+}
+.data{
+    display: flex;
+    flex-direction: column;
+ padding-top: 2rem;
+    width: 60%;
+padding-bottom: 1rem;
+    
+}
+.info{
+    margin-top: 1rem;
+    display: flex;
+    gap: 2rem;
+    font-size: smaller;
+font-weight: bold;
+    color:grey;
+}
+.title{
+    font-weight: bold;
+    color: #FFFFFF;
+}
+p{
+    
+    color: grey;
+    font-size:small;
+}
+.description{
+    width: 80%;
+    
+}
+.img1{
+    padding: 1rem;
+    margin-left: 0rem;
+    padding-right: 0;
+    width: 30%;
+}
+img{
+   width: 80%;
+   height: 100%;
+
+}
+.reel{
+    width: 148px;
+    height:90px ;
+    display: flex;
+    margin: auto;
+    position: fixed;
+  left: 0;
+  right: 0;
+  top: 500px;
+  bottom: auto;
+}
+.warn{
+    width: 60%;
+    height:100% ;
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10rem;
+    background-color: rgb(200, 15, 15);
+}
+.warn > p{
+    color:white;
+}
+#sec,#sec1{
+    background: #121212;
+    
+}
+@media only screen and (max-width: 600px) {
+   
+    header{
+        padding: 1rem;
+        height: 200px;
+    }
+    .head{
+    
+        display: flex;
+        flex-direction: row;
+        gap: 15rem;
+    }
+    h1{ 
+        margin-top: 3rem;
+   font-size: 15px;
+    }
+    h3{
+        font-size: 10px;
+        margin-top: 8rem;  
+        
+       
+    }
+    
+    .search{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    margin-top: -1rem;
+    padding: 0;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    
+    }
+    #icon{
+       
+       width: 30px;
+       height: 20px;
+    }
+    .ic{
+       padding: 0.26rem;
+       margin-left: 4rem;
+    height: 20px;
+    
+        background: #2E2E2F;
+    }
+    input{
+      
+        border: none;
+        width: 50%;
+        height: 26px;
+        background: #2E2E2F;
+        color: #FFFFFF;
+    }
+    button{
+        margin-right: 6rem;
+     width:4rem;
+     height: 28px;
+        background: #4B4B4B;
+        border-radius: 0px 6px 6px 0px;
+    }
+    .item{
+        border-bottom: 1px solid grey;
+     display: flex;
+     gap: 0.5rem;
+     width: 100%;
+     margin: auto;
+     margin-top: 0.3rem;
+     margin-left: 0;
+     }
+     .data{
+         display: flex;
+         flex-direction: column;
+      padding-top: 2rem;
+         width: 100%;
+     padding-bottom: 1rem;
+         
+     }
+     .info{
+      
+         
+         gap: 1rem;
+         font-size: 0.6rem;
+    
+     }
+     
+    
+     .description{
+         width: 70%;
+         
+         
+     }
+     .reel{
+       
+      top: 400px;
+     
+    }
+   
+    
+     .warn{
+    
+         width: 60%;
+         height:100% ;
+         margin: auto;
+         text-align: center;
+         font-weight: bold;
+         margin-top: 10rem;
+         background-color: rgb(200, 15, 15);
+     }
+     .warn > p{
+         color:white;
+     }
+  }
