@@ -20,6 +20,27 @@ const info=await res.json()
 }
     return str1
 }
+let watchlist =document.querySelectorAll('.watchlist')
+/*change 
+*/
+for(let i=0;i<watchlist.length;i++){
+watchlist[i].addEventListener("click",(e)=>{
+    e.preventDefault() 
+    if(e.target.id){
+   
+        navigateToRemove(e.target.id)
+        rener(arr)
+    }
+       
+ })
+}
+ function navigateToRemove(id){
+if(id.includes(arr)){
+    arr=arr.filter(function(id1){
+       return  id1!=id
+    })
+}
+ }
 function render1(movie){
     return `
     <div class="item">
@@ -31,7 +52,7 @@ function render1(movie){
             <div class="theme">${movie.Genre}</div>
             <div class="btn" >
         
-            <div id=${movie.imdbID}>
+            <div class="watchlist" id=${movie.imdbID}>
             <i id=${movie.imdbID} class="fa-solid fa-minus"></i></i>Remove</div>
            </div>
         </div>
