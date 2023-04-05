@@ -1,47 +1,56 @@
 let arr=[]
 arr=JSON.parse(localStorage.getItem("Arr"))
+
 let main1= document.getElementById("sec1")
+
 async function rener(arr){
-console.log("rener called")
-main1.innerHTML= await continueTo(arr)
-}
-rener(arr)
-//console.log(arr)//null 
-async function continueTo(arr){
-   // console.log("continue to called")
-    let str1=''
-if(arr){  
-for(let el of arr){
-console.log(el)
-const res= await fetch(`http://www.omdbapi.com/?apikey=825ff9ad&i=${el}`)
-const info=await res.json()
- str1+=render1(info)
-    }
-}
-    return str1
-}
-let watchlist =document.querySelectorAll('.watchlist')
-/*change 
-*/
+
+    main1.innerHTML= await continueTo(arr)
+
+    let watchlist =document.querySelectorAll('.watchlist')
 for(let i=0;i<watchlist.length;i++){
-watchlist[i].addEventListener("click",(e)=>{
-    e.preventDefault() 
-    if(e.target.id){
-   console.log("bhe")
-        navigateToRemove(e.target.id)
-        rener(arr)
+            console.log(watchlist[i])
+            watchlist[i].addEventListener("click",(e)=>{
+            e.preventDefault() 
+            if(e.target.id){
+                console.log("entered")
+                navigateToRemove(e.target.id)
+                
+            }     
+        })
     }
-       
- })
 }
+
+
+rener(arr)
+
+
+
+ 
+async function continueTo(arr){
+    
+     let str1=''
+ if(arr){  
+ for(let el of arr){
+ console.log(el)
+ const res= await fetch(`http://www.omdbapi.com/?apikey=825ff9ad&i=${el}`)
+ const info=await res.json()
+  str1+=render1(info)
+     }
+ }
+     return str1
+ }
  function navigateToRemove(id){
-if(id.includes(arr)){
-    arr=arr.filter(function(id1){
+    
+arr=arr.filter(function(id1){
        return  id1!=id
     })
-    localStorage.setItem("arr",JSON.stringify(arr))
+    
+localStorage.setItem("arr",JSON.stringify(arr))
+    
+rener(arr)
 }
- }
+ 
 function render1(movie){
     return `
     <div class="item">
