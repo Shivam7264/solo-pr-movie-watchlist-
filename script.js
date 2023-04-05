@@ -63,7 +63,7 @@ function navigateTo(id){
 
     localStorage.setItem("Arr",JSON.stringify(Arr))
     }
-    console.log(Arr)
+    
 }
 async function movie(mb){
     const res =await fetch(`http://www.omdbapi.com/?apikey=825ff9ad&i=${mb.imdbID}`)

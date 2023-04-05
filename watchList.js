@@ -39,6 +39,7 @@ if(id.includes(arr)){
     arr=arr.filter(function(id1){
        return  id1!=id
     })
+    localStorage.setItem("arr",JSON.stringify(arr))
 }
  }
 function render1(movie){
